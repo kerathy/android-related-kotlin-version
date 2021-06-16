@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivitiy"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/linearLayoutName"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What's your name?"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter the name you use in real life."
+            android:textColor="@color/gray"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:layout_below="@+id/textView"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayoutName">
+
+        <EditText
+            android:id="@+id/editTextTextPersonName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            android:inputType="textPersonName"
+            android:hint="@string/first_name"
+            android:maxLines="1"
+            android:autofillHints=""
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            android:inputType="textPersonName"
+            android:hint="@string/last_name"
+            android:maxLines="1"
+            android:layout_marginTop="20dp"
+            android:autofillHints=""
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Next"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:maxLines="1"
+        android:layout_marginTop="30dp"
+        android:layout_centerInParent="true"
+        android:backgroundTintMode="screen"
+        android:backgroundTint="@color/blue"
+        android:background="@drawable/button"/>
+
+</RelativeLayout>
