@@ -8,6 +8,7 @@ import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
 internal class MoviesAdapter(private var moviesList: List<MovieModel>) :
     RecyclerView.Adapter<MoviesAdapter.MyViewHolder>() {
+
     internal inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var title: TextView = view.findViewById(R.id.title)
         var year: TextView = view.findViewById(R.id.year)
@@ -19,12 +20,14 @@ internal class MoviesAdapter(private var moviesList: List<MovieModel>) :
             .inflate(R.layout.item_row, parent, false)
         return MyViewHolder(itemView)
     }
+
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val movie = moviesList[position]
         holder.title.text = movie.getTitle()
         holder.genre.text = movie.getGenre()
         holder.year.text = movie.getYear()
     }
+
     override fun getItemCount(): Int {
         return moviesList.size
     }
