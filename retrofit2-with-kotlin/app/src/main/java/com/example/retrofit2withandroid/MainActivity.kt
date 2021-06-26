@@ -3,6 +3,7 @@ package com.example.retrofit2withandroid
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import retrofit2.Call
 import retrofit2.Callback
@@ -16,7 +17,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        weatherData = findViewById(R.id.textView)
+
+        weatherData = findViewById(R.id.text_view)
         findViewById<View>(R.id.button).setOnClickListener { getCurrentData() }
     }
 
@@ -61,12 +63,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-
         var BaseUrl = "http://api.openweathermap.org/"
         var AppId = "2e65127e909e178d0af311a81f39948c"
         var lat = "35"
         var lon = "139"
     }
-
 
 }
