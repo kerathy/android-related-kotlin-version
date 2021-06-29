@@ -20,12 +20,12 @@ class MainActivity : AppCompatActivity() {
         sliderDotspanel = findViewById(R.id.slider_dots)
 
         models = ArrayList()
-        val titles = arrayOf("Dobby", "Kitto", "Cozmo", "Tiger", "Husky", "Cat")
-        val descs = arrayOf("Dog", "Cat", "Lambardor", "German Shepherd", "Husky", "Unknown")
-
-        for (i in titles.indices) {
-            models.add(PetsModel(R.drawable.dummy_image, titles[i], descs[i]))
-        }
+        models.add(PetsModel(R.drawable.dummy_image, "Dobby", "Dog"));
+        models.add(PetsModel(R.drawable.dummy_image, "Kitto", "Cat"));
+        models.add(PetsModel(R.drawable.dummy_image, "Cozmo", "Lambardor"));
+        models.add(PetsModel(R.drawable.dummy_image, "Tiger", "German Shepherd"));
+        models.add(PetsModel(R.drawable.dummy_image, "Husky", "Husky"));
+        models.add(PetsModel(R.drawable.dummy_image, "Cat", "Unknown"));
 
         adapter = PetAdapter(models, this)
 //        adapter = PetAdapter(models, this@MainActivity)
